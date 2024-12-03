@@ -31,12 +31,25 @@
 - 确保脚本中自定义库路径设置正确。
 - 配置百度千帆和阿里云 Dashscope 的 API 密钥。
 
+### 3. `ks2samp`
+
+**功能：**
+- 该脚本用于执行两样本 Kolmogorov-Smirnov (KS) 检验，以比较两个独立样本是否来自相同的连续分布。
+- 使用 `scipy.stats` 库中的 `ks_2samp` 函数进行统计检验。
+- 处理数据表中的每一行，提取指定字段(指令运行的第一和第二个参数)的数据进行检验，并输出统计量、p 值及检验决策。
+- 适用于集中处理命令。
+
+**安装要求：**
+- Python 3
+- 库: `scipy` 库用于统计检验
+- 确保脚本中自定义库路径设置正确。
+
 
 ## 安装说明
 
 1. **安装所需库：**
    - 日志易 SPL 自定义指令需要再日志易内置 Python 环境中运行。
-   - 日志易内置 Python 默认带有 numpy、scikit-learn 等常见机器学习库。
+   - 日志易内置 Python 默认带有 numpy、scipy、scikit-learn 等常见机器学习库。
    - 使用日志易内置 Python 安装 `analyze_sentiment` 指令所需的 `pysenti` 库：
    ```bash
    /opt/rizhiyi/parcels/python/bin/python /opt/rizhiyi/parcels/python/bin/pip install pysenti
